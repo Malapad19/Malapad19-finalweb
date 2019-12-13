@@ -1,0 +1,2 @@
+First open the login.html
+Much better if you open the inner.html at firefox

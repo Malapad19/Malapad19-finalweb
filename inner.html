@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/inner.css">
+	<link rel="stylesheet" type="text/css" href="css/three.css">
+	<link rel="stylesheet" type="text/css" href="css/three-box2.css">
+	<link rel="stylesheet" type="text/css" href="css/three-box45.css">
+	<link rel="stylesheet" type="text/css" href="css/box2title.css">
+	<link rel="stylesheet" type="text/css" href="css/video.css">
+	<link rel="stylesheet" type="text/css" href="css/audio.css">
+	<link rel="stylesheet" type="text/css" href="css/three-67.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="innercontainer">
+		<div class="two">
+			<div class="onelogo"><img src="img/logo.jpg"></div>
+			<div class="one"><a href="#"><p>Search Bar</p></a></div>
+			<div class="one"><a href="#"><p>Home</p></a></div>
+			<div class="one"><a href="#"><p>Explore</p></a></div>
+			<div class="one"><a href="#"><p>Hear This</p></a></div>
+			<div class="one"><a href="#"><p>My Music</p></a></div>
+			<div class="audioplayer">
+			<div id="main">
+            <div id="image">
+                <img src="img/logo3.jpg"/>
+            </div>
+            <div id="player">
+                <div id="songTitle">Demo</div>
+                <div id="buttons">
+                    <button id="pre" onclick="pre()"><img src="img/Pre.png" height="90%" width="90%"/></button>
+                    <button id="play" onclick="playOrPauseSong()"><img src="img/Pause.png"/></button>
+                    <button id="next" onclick="next()"><img src="img/Next.png" height="90%" width="90%"/></button>
+                </div>
+                <div id="seek-bar">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+         <script type="text/javascript">
+    
+                
+        var songs = ["music1.mp3","music2.mp3","music3.mp3","music4.mp3","music5.mp3","music6.mp3"];
+        var logo = ["logo.jpg","logo2.jpg","logo3.jpg"];
+        
+        var songTitle = document.getElementById("songTitle");
+        var fillBar = document.getElementById("fill");
+        var image = document.getElementById("image");
+        
+        var song = new Audio();
+        var currentSong = 0;
+        
+        window.onload = playSong;
+        
+        function playSong(){
+            
+            song.src = songs[currentSong];
+            
+            songTitle.textContent= songs[currentSong];
+            song.play();
+        }
+        
+        function playOrPauseSong(){
+            
+            if(song.paused){
+                song.play();
+                $("#play img").attr("src","Pause.png");
+            }
+            else{
+                song.pause();
+                $("#play img").attr("src","Play.png");
+            }
+        }
+        
+        song.addEventListener('timeupdate',function(){ 
+            
+            var position = song.currentTime / song.duration;
+            
+            fillBar.style.width = position * 100 +'%';
+        });
+        
+    
+        function next(){
+            
+            currentSong++;
+            if(currentSong > 6){
+                currentSong = 0;
+            }
+            playSong();
+            $("#play img").attr("src","Pause.png");
+            $("#image img").attr("src",logo[currentSong]);
+        }
+    
+        function pre(){
+            
+            currentSong--;
+            if(currentSong < 0){
+                currentSong = 5;
+            }
+            playSong();
+            $("#play img").attr("src","Pause.png");
+            $("#image img").attr("src",poster[currentSong]);
+        }
+    </script>
+
+		</div>
+		<div class="three">
+			<div class="Party Rock recommend">
+				<h2>Party Rock Music Videos</h2>
+			</div>
+			<br>
+			<div id="button1" class="buttons">
+					<a class="previous" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					<a class="next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+			</div>
+			<div class="box1">
+				<div class="c1">
+					<video width="450" height="250" controls="" class="video">
+						<source src="video/vid1.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="c2">
+					<video width="450" height="250" controls="" class="video">
+						<source src="video/vid2.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div class="genrechoices">
+					<a href=""><h2>Browse</h2></a>
+					<h4>Explore by genre and mood</h4>
+				</div>
+				<br>
+				<div id="button2" class="buttons">
+					<a class="previous" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					<a class="next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+				</div>
+			<div class="box2">
+				<div class="c1">
+					<img src="img/www.jpg">
+					<div class="text">
+						<a href="#"><p>TV, Gaming and Movies</p></a>
+					</div>
+				</div>
+				<div class="c2">
+					<img src="img/eee.jpg">
+					<div class="text one">
+						<a href="#"><p>Rap</p></a>
+					</div>
+				</div>
+				<div class="c3 genre bgg3 bgcolor3"><a href="#"><p>Dance and EDM</p></a></div>
+				<div class="c4 genre bgg4 bgcolor4"><a href="#"><p>R'n'B</p></a></div>
+				<div class="c5 genre bgg5 bgcolor5"><a href="#"><p>Pop</p></a></div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div class="Party Rockrecommend">
+				<h2>Party Rock recommends</h2>
+			</div>
+			<br>
+			<div id="button3" class="buttons">
+					<a class="previous" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					<a class="next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+				</div>
+			<div class="box3">
+				<div class="c1">
+					<video width="450" height="250" controls="" class="video">
+						<source src="video/vid3.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="c2">
+					<video width="450" height="250" controls="" class="video">
+						<source src="video/vid4.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div class="playlistpicks">
+				<h2>Playlist picks</h2>
+				<h4>Choosen for you by our Editors</h4>
+				<div id="button4" class="buttons">
+					<a class="previous" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					<a class="next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+			</div>
+			</div>
+			<div class="box4">
+				<div class="c1 c">
+					<img src="img/avril.jpg">
+					<div class="b5content">
+					</div>
+				</div>
+				<div class="c2 c">
+					<img src="img/Adele.jpg">
+					<div class="b5content">
+					</div>
+				</div>
+				<div class="c3 c">
+					<img src="img/justin.jpg">
+					<div class="b5content">
+					</div>
+				</div>
+				<div class="c4 c">
+					<img src="img/enriq.jpg">
+					<div class="b5content">
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div class="popular"><h2>Popular</h2></div>
+			<div id="button5" class="buttons">
+					<a class="previous" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					<a class="next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+			</div>
+			<div class="box5">
+				<div class="c1 c">
+					<img src="img/kelly.jpg">
+					<div class="b5content">
+					</div>
+				</div>
+				<div class="c2 c">
+					<img src="img/cd.jpg">
+					<div class="b5content">
+					</div>
+				</div>
+				<div class="c3 c">
+					<img src="img/es.png">
+					<div class="b5content">
+					</div>
+				</div>
+				<div class="c4 c">
+					<img src="img/tay.png">
+					<div class="b5content">
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="chart"><h2>Charts</h2></div>
+			<div class="box6">
+				<div class="c1">
+					<video width="450" height="250" controls="" class="video">
+						<source src="video/vid5.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="c2">
+					<video width="450" height="250" controls="" class="video">
+						<source src="video/vid6.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="newrelease"><h2>New releases</h2></div>
+			<div id="button6" class="buttons">
+					<a class="previous" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					<a class="next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+			</div>
+			<div class="box7">
+				<div class="c1 c">
+					<img src="img/es.png">
+					<div class="b5content">
+					</div>
+				</div>
+				<div class="c2 c">
+					<img src="img/justin.jpg">
+					<div class="b5content">
+					</div>
+				</div>
+				<div class="c3 c">
+					<img src="img/cd.jpg">
+					<div class="b5content">
+					</div>
+				</div>
+				<div class="c4 c">
+					<img src="img/adele.jpg">
+					<div class="b5content">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="four">Four</div>
+	</div>
+</body>
+</html>

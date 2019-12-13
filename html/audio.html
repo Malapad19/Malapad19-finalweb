@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="jquery-70.10.2.mins.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/audio.css">
+    </head>
+    <body>
+        <div id="bg">
+            <div id="blackLayer"></div>
+            <img src="img/logo3.jpg"/>
+        </div>
+       
+        <div id="main">
+            <div id="image">
+                <img src="img/logo3.jpg"/>
+            </div>
+            <div id="player">
+                <div id="songTitle">Demo</div>
+                <div id="buttons">
+                    <button id="pre" onclick="pre()"><img src="img/Pre.png" height="90%" width="90%"/></button>
+                    <button id="play" onclick="playOrPauseSong()"><img src="img/Pause.png"/></button>
+                    <button id="next" onclick="next()"><img src="img/Next.png" height="90%" width="90%"/></button>
+                </div>
+                
+                <div id="seek-bar">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    
+        var songs = ["music1.mp3","music2.mp3","music3.mp3","music4.mp3","music5.mp3","music6.mp3"];
+        var logo = ["logo3.jpg","logo3.jpg","logo3.jpg"];
+        
+        var songTitle = document.getElementById("songTitle");
+        var fillBar = document.getElementById("fill");
+        var image = document.getElementById("image");
+        
+        var song = new Audio();
+        var currentSong = 0;
+        
+        window.onload = playSong;
+        
+        function playSong(){
+            
+            song.src = songs[currentSong];
+            
+            songTitle.textContent= songs[currentSong];
+            song.play();
+        }
+        
+        function playOrPauseSong(){
+            
+            if(song.paused){
+                song.play();
+                $("#play").attr("src","Pause.png");
+            }
+            else{
+                song.pause();
+                $("#play").attr("src","Play.png");
+            }
+        }
+        
+        song.addEventListener('timeupdate',function(){ 
+            
+            var position = song.currentTime / song.duration;
+            
+            fillBar.style.width = position * 100 +'%';
+        });
+        
+    
+        function next(){
+            
+            currentSong++;
+            if(currentSong > 5){
+                currentSong = 0;
+            }
+            playSong();
+            $("#play img").attr("src","Pause.png");
+            $("#image img").attr("src",logo[currentSong]);
+            $("#bg img").attr("src",logo[currentSong]);
+        }
+    
+        function pre(){
+            
+            currentSong--;
+            if(currentSong < 0){
+                currentSong = 5;
+            }
+            playSong();
+            $("#play img").attr("src","Pause.png");
+            $("#image img").attr("src",logo[currentSong]);
+            $("#bg img").attr("src",logo[currentSong]);
+        }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</html>

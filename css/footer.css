@@ -1,0 +1,49 @@
+.Footer{
+	background: #2b2d42;
+	height: 250px;
+	padding-top: 50px;
+}
+.Footer .grid1{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 
+	"Content2  Image Content1";
+	grid-gap: 10px;
+}
+.content1{
+	grid-area: Content3;
+	justify-self: center;
+}
+.content2{
+	grid-area: Content4;
+	justify-self: center;
+}
+.image{
+	grid-area: Image;
+	justify-self: center;
+}
+.Footer .grid1 a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #fff;
+}
+.Footer .grid1 a:hover{
+	background: transparent;
+	color: #ff1654;
+}
+.Footer .grid1 div nav ul li{
+	list-style: none;
+	margin-top: 5px;
+}
+.Footer .grid1 h1{
+	font-size: 18px;
+	color: #247ba0;
+}
+.Footer .grid1 .image{
+	margin-top: 5px;
+}
+.Footer .grid1 .image img{
+	width: 100px;
+	height: 100px;
+}

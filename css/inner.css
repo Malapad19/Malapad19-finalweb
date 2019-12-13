@@ -1,0 +1,96 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.innercontainer{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr minmax(180px);
+	grid-template-areas: 
+	"Two Three"
+	"Four Four";
+	grid-gap: 10px;
+	width: 100%;
+}/*
+.innercontainer div:nth-child(odd){
+	background: #0f0;
+}
+.innercontainer div:nth-child(even){
+	background: #247ba0;
+}*/
+.two{
+	align-self: start;
+	justify-self: start;
+	grid-area: Two;
+	height: 100%;
+	width: 20.8%;
+	position: fixed;
+	background: #2b2d42;
+}
+.three{
+	align-self: start;
+	justify-self: start;
+	grid-area: Three;
+	margin: 20px 300px;
+	width: 100%;
+	padding: 0;
+}
+.four{
+	align-self: center;
+	grid-area: Four;
+}
+.two .one{
+	height: 30px;
+	font-size: 20px;
+}
+a{
+	text-decoration: none;
+	color: gray;
+}
+/*Button start here*/
+.buttons{
+	position: relative;
+	margin-top: -50px;
+	float: right;
+	right: -200px;
+}
+.next{
+	height: 30px;
+	width: 30px;
+	display: inline-flex;
+	border: solid 1px gray;
+	border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.previous{
+	height: 30px;
+	width: 30px;
+	display: inline-flex;
+	border: solid 1px gray;
+	border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.next i{
+	padding-top: 7px;
+	padding-left: 30%;
+    color: gray;
+    width: 100%;
+}
+.previous i{
+	padding-top: 7px;
+	padding-left: 30%;
+	color: gray;
+    width: 100%;
+}
+.next::before{
+	height: 30px;
+	width: 30px;
+	display: inline-flex;
+	border: solid 1px #247ba0;
+	border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.next i::before{
+    color: #247ba0;
+    width: 100%;
+}

@@ -1,0 +1,109 @@
+.three .box2{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr minmax(180px);
+	grid-template-areas: 
+	"c1 c2 c3 c4 c5";
+	grid-gap: 20px;
+}
+.c1{
+	align-self: center;
+	grid-area: c1;
+}
+.c2{
+	align-self: center;
+	grid-area: c2;
+}
+.c3{
+	align-self: center;
+	grid-area: c3;
+}
+.c4{
+	align-self: center;
+	grid-area: c4;
+}
+.c5{
+	align-self: center;
+	grid-area: c5;
+}
+.three .box2 .c1,
+.three .box2 .c2,
+.three .box2 .c3,
+.three .box2 .c4,
+.three .box2 .c5{
+	height: 90px;
+	width: 190px;
+	margin: 0;
+	padding: 0;
+}
+.three .box2 .c1 img,
+.three .box2 .c2 img{
+	height: 90px;
+	width: 190px;
+	border-radius: 2px;
+	position: absolute;
+}
+.three .box2 .c1 .text,
+.three .box2 .c2 .text{
+	height: 90px;
+	width: 190px;
+	background: rgba(46, 149, 182, .8);
+	position: absolute;
+	margin-top: 0;
+	z-index: 3;
+	text-align: center;
+	border-radius: 2px;
+}
+.three .box2 .c2 .text{
+	background: rgba(251, 92, 53, .8);
+}
+
+.three .box2 .c1 .text p,
+.three .box2 .c2 .text p{
+	text-align: center;
+	position: relative;
+	color: #fff;
+	margin-top: 40px;
+	transform: translateY(-30%);
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+.genre{
+	border-radius: 3px;
+}
+.bgg1{
+	background: url(../img/www.jpg);
+	background-size: 100%;
+}
+.bgg2{
+	background: url(../img/eee.jpg);
+	background-size: 100%;
+}
+.bgg3{
+	background: url(../img/123.jpg);
+	background-size: 100%;
+}
+.bgg4{
+	background: url(../img/esmeralda.jpg);
+	background-size: 100%;
+}
+.bgg5{
+	background: url(../img/xxx.jpeg);
+	background-size: 100%;
+}
+.three .box2 .bgcolor1 p{
+	background: linear-gradient(0deg, 5%, transparent);
+}
+.three .box2 .bgcolor2 p{
+	background: linear-gradient(0deg, 5%, transparent);
+}
+.three .box2 .bgcolor3 p{
+	background: linear-gradient(0deg,  5%, transparent);
+}
+.three .box2 .bgcolor4 p{
+	background: linear-gradient(0deg, 5%, transparent);
+}
+.three .box2 .bgcolor5 p{
+	background: linear-gradient(0deg, 5%, transparent);
+}

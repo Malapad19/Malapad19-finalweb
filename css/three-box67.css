@@ -1,0 +1,15 @@
+.three .box6{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr minmax(180px);
+	grid-template-areas: 
+	"c1 c2";
+}
+.c1{
+	align-self: center;
+	grid-area: c1;
+}
+.c2{
+	align-self: center;
+	grid-area: c2;
+}

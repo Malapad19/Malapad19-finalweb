@@ -1,0 +1,68 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.three .box1{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr minmax(180px);
+	grid-template-areas: 
+	"c1 c2";
+	grid-gap: 20px;
+	width: 500px;
+}
+.c1{
+	align-self: center;
+	grid-area: c1;
+}
+.c2{
+	align-self: center;
+	grid-area: c2;
+}
+.three .box3{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr minmax(180px);
+	grid-template-areas: 
+	"c1 c2";
+	grid-gap: 20px;
+}
+.c1{
+	align-self: center;
+	grid-area: c1;
+
+}
+.c2{
+	align-self: center;
+	grid-area: c2;
+}
+.three .box1 .c1,
+.three .box1 .c2,
+.three .box3 .c1,
+.three .box3 .c2,
+.three .box6 .c1,
+.three .box6 .c2
+
+{
+	height: 250px;
+	width: 500px;
+	border-radius: 3px;
+}
+/*Logo*/
+.onelogo{
+	height: 40px;
+	width: 120px;
+	overflow: hidden;
+	margin: 10px 70px;
+}
+.onelogo img{
+	height: 100%;
+	width: 100%;
+}
+.three h2{
+	color: #2b2d42;
+}
+.three{
+	width: 50%;
+}
+

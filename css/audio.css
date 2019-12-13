@@ -1,0 +1,107 @@
+
+#player{
+    position: relative;
+}
+#main{
+    width: 280px;
+    background-color:#fff;
+    position: relative;
+    z-index: 999;
+    background-color: black;
+    margin-top: 30%;
+}
+#image img{
+    height: 180px;
+    width: 100%;
+    margin-top: -50px;
+}
+#player{
+    padding: 25px;
+    color:#333;
+}
+#songTitle{
+    width:250px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
+    position: relative;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#buttons{
+    height: 50px;
+    width: 100%;
+    position:relative;
+    left: 25%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+#play, #next, #pre{
+    height: 40px;
+    width: 40px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    background-color:royalblue;
+    border-radius: 50%;
+}
+#next{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    top: -15px;
+}
+#pre{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -15px;
+}
+#play img{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: -6px;
+    left: -11px;
+}
+#pre img{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    left: -7px;
+
+}
+#next img{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    left: -3px;  
+}
+#seek-bar{
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color:gray;
+    display: flex;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+#fill{
+    height: 5px;
+    background-color:royalblue;
+    border-radius: 20px;
+}
+#handle{
+    width: 8px;
+    height: 8px;
+    background-color:royalblue;
+    border-radius: 50%;
+    margin-left: -5px;
+    transform: scale(2);
+}

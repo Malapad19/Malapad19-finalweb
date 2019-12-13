@@ -1,0 +1,75 @@
+.Title{
+	height: 60px;
+	background: #fff;
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+}
+.Title .grid3{
+	display: grid;
+	height: 100%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 1fr;
+	"Logo ContentMenu";
+}
+.grid3 .img{
+	grid-area: logo;
+	justify-self: center;
+	align-self: center;
+}
+.grid3 .menu{
+	grid-area: ContentMenu;
+	justify-self: center;
+	align-self: center;
+	margin-left: 30%;
+}
+.menu nav ul li{
+	float: left;
+	list-style: none;
+	margin-left: 20px;
+	height: 30px;
+	width: 100px;
+	position: relative;
+	box-sizing: border-box;
+	border: solid 2px #2692b7;
+	border-radius: 20px;
+	background: transparent;
+}
+.menu nav ul li:active{
+	color: #2692b7;
+}
+.menu nav{
+	margin-top: 5px;
+}
+.menu nav ul li a{
+	text-decoration: none;
+	color: #2692b7;
+}
+.menu nav ul li a:active{
+	color: #2692b7;
+}
+.menu p{
+	padding-top: 4px;
+	font-size: 15px;
+	text-align: center;
+}
+.menu p:hover{
+	color: #fff;
+}
+.menu nav ul li:hover{
+	background: #2692b7;
+}
+.menu h1 p{
+	text-align: center;
+}
+.img{
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+}
+.alucard img{
+	height: 100px;
+	width: 100px;
+}

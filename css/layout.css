@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'PT Sans', sans-serif;
+	overflow-x: hidden;
+}
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr minmax(180px);
+	grid-template-areas: 
+	"Title Title"
+	"Header1 Header1"
+	"Header2 Header2"
+	"DJ1 DJ2"
+	"Footer Footer";
+	grid-gap: 50px;
+}
+.Title{
+	align-self: end;
+	grid-area: Title;
+}
+.grid a{
+	text-decoration: none;
+}
+.grid a:hover{
+	background: #247ba0;
+}
+.Header1{
+	margin-top: -46px;
+	grid-area: Header1;
+	align-self: center;
+	grid-gap: 50px;
+}
+.Header2{
+	grid-area: Header2;
+	align-self: center;
+	grid-gap: 50px;
+}
+.DJ1{
+	grid-area: DJ1;
+	grid-gap: 50px;
+}
+.DJ1 .card,
+{
+	position: relative;
+	width: 400px;
+	height: 450px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+	border-radius: 5px;
+}
+.DJ1 .card .poster,
+{
+	position: relative;
+	overflow: hidden;
+}
+.DJ1 .card .poster::before,
+{
+	content: '';
+	position: absolute;
+	bottom:-210px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(0deg, #000 50%, transparent);
+	transition: 0.5s;
+	z-index: 1;
+}
+.DJ1 .card:hover .poster::before{
+	bottom: 0;
+}
+.DJ1 .card .poster img{
+	width: 100%;
+	height: 450px;
+	transition: 0.5s;
+}
+.DJ1 .card:hover .poster img{
+	filter: blur(5px);
+	transform: translateY(-50%);
+}
+.DJ1 .details{
+	position: absolute;
+	padding: 20px;
+	margin: 20px;
+	width: 100%;
+	height: 74%;
+	bottom:-210px;
+	left: -20px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	z-index: 2;
+	overflow: hidden;
+}
+.DJ1 .card:hover .details{
+	bottom: 0;
+}
+.DJ1 .details h2{
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+.DJ1 .details h2 span{
+	color: #ff9800;
+	font-size: 14px;
+}
+.DJ1 .details a{
+	color: #fff;
+}
+.DJ1 .details a:hover{
+	color: #f7f406;
+	background: none;
+}
+.DJ1 .rating{
+	overflow: hidden;
+	position: relative;
+	padding: 5px 0;
+}
+.DJ1 .rating .fa{
+	overflow: hidden;
+	color: #f7f406;
+	margin: 2px;
+	font-size: 16px;
+}
+.DJ1 .rating span{
+	color: #fff;
+	padding: 0 5px;
+}
+.DJ1 .tags{
+	position: relative;
+	margin: 5px;
+}
+.DJ1 .tags span{
+	padding: 2px 5px;
+	margin-right: 2px;
+	display: inline-block;
+	border-radius: 4px;
+	color: #fff;
+}
+.DJ1 .tags span.pop{
+	background: #7206f7;
+}
+.DJ1 .tags span.rock{
+	background: #f70661;
+}
+.DJ1 .tags span.rnb{
+	background: #247ba0;
+}
+.DJ1 .info{
+	color: #fff;
+}
+.DJ1 .info p{
+	margin: 15px 0 10px;
+}
+.DJ1 .sma{
+	position: relative;
+	overflow: hidden;
+	
+}
+.DJ1 .sma h4{
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	color: #f7f406;
+	overflow: hidden;
+	
+}
+.DJ1 .sma ul{
+	display: flex;
+	position: relative;
+	top: 10%;
+	transform: translateY(-10%);
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+.DJ1 .sma ul .btn{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: #f1f1f1;
+	margin: 10px;
+	border-radius: 20%;
+	overflow: hidden;
+	position: relative;
+}
+.DJ1 .sma ul .btn i{
+	line-height: 40px;
+	font-size: 26px;
+	transition: 0.2s linear;
+}
+.DJ1 .sma ul .btn:hover i{
+	transform: scale(1.3);
+	color: #f1f1f1;
+}
+.DJ1 .sma ul .btn::before{
+	content: "";
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	background: #3498db;
+	transform: rotate(45deg);
+	left: -150%;
+	top: 40%;
+}
+.DJ1 .sma ul .btn:hover::before{
+	animation: aaa 0.7s 1;
+	top: -10%;
+	left: -10%;
+}
+@keyframes aaa{
+	0%{
+		left: -110%;
+		top: 90%;
+	}
+	50%{
+		left: 10%;
+		top: -30%;
+	}
+	100%{
+		left: -10%;
+		top: -10%;
+	}
+}
+
+.Footer{
+	grid-area: Footer;
+}
+
